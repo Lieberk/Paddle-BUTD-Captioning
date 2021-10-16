@@ -1,0 +1,26 @@
+# base
+id: updown
+caption_model: updown
+start_from: log/log_updown_30
+input_json: D:/dataset/coco_data/cocotalk.json
+input_label_h5: D:/dataset/coco_data/cocotalk_label.h5
+input_fc_dir: D:/dataset/coco_data/cocobu_fc
+input_att_dir: D:/dataset/coco_data/cocobu_att
+input_box_dir: D:/dataset/coco_data/cocobu_box
+
+learning_rate: 0.0005
+checkpoint_path: log/log_updown_30
+
+language_eval: 1
+save_checkpoint_every: 3000
+val_images_use: 5000
+rnn_size: 1000
+input_encoding_size: 1000
+att_feat_size: 2048
+att_hid_size: 512
+
+self_critical_after: 30
+batch_size: 10
+scheduled_sampling_start: 0
+learning_rate_decay_start: 0
+max_epochs: 30

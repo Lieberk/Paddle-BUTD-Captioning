@@ -1,0 +1,16 @@
+model: log/log_updown_30/model_best.pdparams
+infos_path: log/log_updown_30/infos_updown_best.pkl
+
+input_json: D:/dataset/coco_data/cocotalk.json
+input_label_h5: D:/dataset/coco_data/cocotalk_label.h5
+input_fc_dir: D:/dataset/coco_data/cocobu_fc
+input_box_dir: D:/dataset/coco_data/cocobu_box
+input_att_dir: D:/dataset/coco_data/cocobu_att
+
+dump_images: 0
+dump_json: 1
+num_images: -1
+language_eval: 1
+beam_size: 2
+batch_size: 10
+split: test
