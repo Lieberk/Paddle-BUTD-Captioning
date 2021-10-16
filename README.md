@@ -55,7 +55,7 @@ yaml==0.2.5
 
 通过Faster R-CNN模型提取的Bottom-up 原始特征文件[链接](https://github.com/ruotianluo/ImageCaptioning.pytorch/blob/master/data/README.md)
 
-生成fcocotalk_label.h5和cocoktalk.json文件
+生成cocotalk_label.h5和cocoktalk.json文件
 ```bash
 python scripts/prepro_labels.py
 ```
