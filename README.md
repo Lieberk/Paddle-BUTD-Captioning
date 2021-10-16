@@ -6,11 +6,11 @@
 
 在人类视觉系统中，存在自上而下(Top-Down Attention)和自下而上(Bottom-Up Attention)两种注意机制。前者注意力由当前任务所决定，我们会根据当前任务聚焦于与任务紧密相关的部分，后者注意力指的是我们会被显著的、突出的事物所吸引。 视觉注意大部分属于自上而下类型，图像作为输入，建模注意权值分布，然后作用于CNN提取的图像特征。然而，这种方法的注意作用图像对应于下图的左图，没有考虑图片的内容。对于人类来说，注意力会更加集中在图片的目标或其他显著区域，所以论文作者引进自下而上注意(Bottom-Up Attention)机制，如下图的右图所示，注意力作用于显著物体上。
 
-![预测结果](image/comparison.jpg)
+![对比图](image/comparison.jpg)
 
 Caption model结构如下图所示，模型共有2个LSTM模块，一个是Language LSTM，另一个是Top-Down Attention LSTM。 本文的Bottom-Up Attention 用的是目标检测(object detection)领域的Faster R-CNN方法来提取。
 
-![预测结果](image/model.png)
+![模型结构](image/model.png)
 
 [参考项目地址链接](https://github.com/ruotianluo/ImageCaptioning.pytorch)
 
