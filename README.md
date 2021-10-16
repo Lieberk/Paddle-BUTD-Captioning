@@ -1,5 +1,4 @@
-# paddle-bottom-up-attention-captioning
-基于paddlepaddle框架的Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering论文实现
+# Paddle-BUTD-Captioning
 
 ## 一、简介
 参考论文：《Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering》[论文链接](https://ieeexplore.ieee.org/document/8578734)
