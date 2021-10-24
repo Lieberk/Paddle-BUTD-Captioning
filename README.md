@@ -134,3 +134,4 @@ python eval.py
 | 支持硬件 | GPU、CPU |
 | 下载链接 | [训练好的模型](https://aistudio.baidu.com/aistudio/datasetdetail/108181)|
 | 在线运行 | [notebook](https://aistudio.baidu.com/aistudio/projectdetail/2345929)|
+| 复现总结 | [论坛](https://aistudio.baidu.com/paddle/forum/topic/show/991202)|
