@@ -3,7 +3,7 @@
 [简体中文](./README_ch.md) | English
    
 ## 1 Introduction
-paper：《Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering》[paper](https://ieeexplore.ieee.org/document/8578734)
+Paper：《Bottom-Up and Top-Down Attention for Image Captioning and Visual Question Answering》[paper](https://ieeexplore.ieee.org/document/8578734)
 
 There are two kinds of Attention mechanisms in human visual system: top-down Attention and bottom-up Attention.  In the former, attention is determined by the task at hand, and we focus on the parts closely related to the task, while in the latter, attention means that we are attracted to the salient and outstanding things.  Most visual attention belongs to top-down type. Images are taken as input, weight distribution is paid attention to in modeling, and then image features extracted by CNN are acted on.  However, the attentional image of this method corresponds to the left image below, without considering the content of the image.  For humans, Attention is more focused on the target in the picture or other prominent areas, so the author of this paper introduced the mechanism of bottom-up Attention, as shown in the right picture below, which applies Attention to prominent objects.  
 
@@ -101,7 +101,7 @@ python eval.py
 
 During the test, the program will load the training model data saved in the log/repo.  
 
-[Download the trained model data] (https://aistudio.baidu.com/aistudio/datasetdetail/108181), into the log/repo, then perform validation instructions directly.  
+[Download the trained model data](https://aistudio.baidu.com/aistudio/datasetdetail/108181), into the log/repo, then perform validation instructions directly.  
 
 ## 6 Code structure
 
