@@ -56,7 +56,7 @@ Load preprocessed data files are all placed under the data/repo
 
 [“Karpathy” data split json](https://aistudio.baidu.com/aistudio/datasetdetail/107078)
 
-Bottom-up original feature file extracted by Faster R-CNN model [link] (https://github.com/ruotianluo/ImageCaptioning.pytorch/blob/master/data/README.md)
+Bottom-up original feature file extracted by Faster R-CNN model. [link](https://github.com/ruotianluo/ImageCaptioning.pytorch/blob/master/data/README.md)
 
 Generate cocotalk label.h5 and cocoktalk.json files
 ```bash
