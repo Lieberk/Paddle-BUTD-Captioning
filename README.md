@@ -135,6 +135,6 @@ For other information about the model, please refer to the following table:
 | Framework version | Paddle 2.1.2 |
 | Application scenarios | multi-modal |
 | Support hardware | GPU、CPU |
-| Download link | [best model]((https://aistudio.baidu.com/aistudio/datasetdetail/108181)|
+| Download link | [best model](https://aistudio.baidu.com/aistudio/datasetdetail/108181)|
 |Online operation| [notebook](https://aistudio.baidu.com/aistudio/projectdetail/2345929)|
 | summarize | [forum](https://aistudio.baidu.com/paddle/forum/topic/show/991202)|
