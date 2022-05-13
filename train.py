@@ -124,7 +124,7 @@ def train(opt):
             fc_feats, att_feats, labels, masks, att_masks = tmp
 
             model_out = dp_lw_model(fc_feats, att_feats, labels, masks, att_masks, data['gts'],
-                                    paddle.arange(0, gts.shape[0]), sc_flag)
+                                    paddle.arange(0, len(data['gts'])), sc_flag)
 
             loss = model_out['loss'].mean()
             loss_sp = loss / acc_steps
