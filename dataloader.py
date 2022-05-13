@@ -165,6 +165,7 @@ class Dataset(data.Dataset):
         wrapped = False
 
         infos = []
+        gts = []
 
         for sample in batch:
             # fetch image
@@ -182,11 +183,15 @@ class Dataset(data.Dataset):
                 tmp_label[:, 1: self.seq_length + 1] = tmp_seq
             label_batch.append(tmp_label)
 
+            # Used for reward evaluation
+            if hasattr(self, 'h5_label_file'):
+                # if there is ground truth
+                gts.append(self.label[self.label_start_ix[ix] - 1: self.label_end_ix[ix]].tolist())
+            else:
+                gts.append([])
+
             # record associated info as well
-            info_dict = {}
-            info_dict['ix'] = ix
-            info_dict['id'] = self.info['images'][ix]['id']
-            info_dict['file_path'] = self.info['images'][ix].get('file_path', '')
+            info_dict = {'ix': ix, 'id': self.info['images'][ix]['id'], 'file_path': self.info['images'][ix].get('file_path', '')}
             infos.append(info_dict)
 
         # sort by att_feat length
@@ -194,7 +199,6 @@ class Dataset(data.Dataset):
             zip(*sorted(zip(fc_batch, att_batch, label_batch, infos), key=lambda x: 0, reverse=True))
 
         data = {}
-
         data['fc_feats'] = np.stack(fc_batch)
         # merge att_feats
         max_att_len = max([_.shape[0] for _ in att_batch])
@@ -218,6 +222,8 @@ class Dataset(data.Dataset):
 
         data['bounds'] = {'it_pos_now': it_pos_now,  # the it_pos_now of the last sample
                           'it_max': len(self.split_ix[split]), 'wrapped': wrapped}
+
+        data['gts'] = gts  # all ground truth captions of each images
         data['infos'] = infos
 
         data = {k: paddle.to_tensor(v) if type(v) is np.ndarray else v for k, v in

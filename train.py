@@ -123,14 +123,7 @@ def train(opt):
             tmp = [_ if _ is None else _.cuda() for _ in tmp]
             fc_feats, att_feats, labels, masks, att_masks = tmp
 
-            batch = att_feats.shape[0]
-            length = labels.shape[-1] - 2
-            gts = np.zeros([batch, opt.seq_per_img, length], dtype='int')
-            for i in range(batch):
-                for j in range(opt.seq_per_img):
-                    gts[i][j] = labels[i * opt.seq_per_img + j][1:opt.seq_length + 1]
-
-            model_out = dp_lw_model(fc_feats, att_feats, labels, masks, att_masks, gts,
+            model_out = dp_lw_model(fc_feats, att_feats, labels, masks, att_masks, data['gts'],
                                     paddle.arange(0, gts.shape[0]), sc_flag)
 
             loss = model_out['loss'].mean()
