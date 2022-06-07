@@ -134,6 +134,6 @@ python eval.py
 | 框架版本 | Paddle 2.1.2 |
 | 应用场景 | 多模态 |
 | 支持硬件 | GPU、CPU |
-| 下载链接 | [训练好的模型](https://aistudio.baidu.com/aistudio/datasetdetail/108181)|
+| 下载链接 | [最优模型](https://aistudio.baidu.com/aistudio/datasetdetail/108181)|
 | 在线运行 | [notebook](https://aistudio.baidu.com/aistudio/projectdetail/2345929)|
 | 复现总结 | [论坛](https://aistudio.baidu.com/paddle/forum/topic/show/991202)|
